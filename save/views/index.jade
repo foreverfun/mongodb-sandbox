@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Hello Movies!
+
+  form(action="/submitMovie" method="post")
+    input(type="input" name="title")
+    input(type="submit")
+
+  ul
+    for movie in movies
+      li=movie.title
